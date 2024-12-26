@@ -13,8 +13,6 @@ jobs:
     with:
       upload-artifact: true
       upload-tag: "nightly"
-      matrix: |
-        include:
-          - os: windows-latest
-            flutter-arch: x64
-            target: windows
+      build-windows: true
+      build-linux: false
+      build-mac: false
