@@ -8,9 +8,9 @@ on:
 
 jobs:
   run-flutter-nightly-build:
+    runs-on: windows-latest  # 修改为仅在 Windows 上运行
     uses: ./.github/workflows/flutter-build.yml
     secrets: inherit
     with:
       upload-artifact: true
       upload-tag: "nightly"
-      build-for-windows-flutter: true
