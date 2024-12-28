@@ -1,0 +1,19 @@
+name: Sync Fork
+
+on:
+  schedule:
+    - cron: '* */24 * * *' # 每天一次
+  workflow_dispatch: # on button click
+
+jobs:
+  sync:
+
+    runs-on: windows-latest
+
+    steps:
+      - uses: tgymnich/fork-sync
+        with:
+          token: ${{ secrets.PERSONAL_TOKEN }}
+          owner: rustdesk
+          base: master
+          head: master
