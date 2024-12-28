@@ -6,8 +6,7 @@ on:
   workflow_dispatch: # on button click
 
 jobs:
-  sync:
-
+  sync:windows-latest
     steps:
       - uses: tgymnich/fork-sync@2.0
         with:
